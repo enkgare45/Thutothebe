@@ -6,11 +6,6 @@ $(document).ready(function(){
 		animation: {height:'show'}
 	});  
 
-});
- $(document).ready(function(){
-    $( "#bookmodal" ).hover(function() {
-           $('.modal').modal({
-        show: true
-    });
-  });  
-});
+* {
+  font-family: 'Josefin Sans', sans-serif !important;   
+}
