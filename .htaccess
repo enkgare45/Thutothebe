@@ -1,33 +1,4 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-Options Indexes
-ErrorDocument 400 404.html
-ErrorDocument 401 404.html
-ErrorDocument 402 404.html
-ErrorDocument 403 404.html
-ErrorDocument 404 404.html
-ErrorDocument 405 404.html
-ErrorDocument 406 404.html
-ErrorDocument 407 404.html
-ErrorDocument 408 404.html
-ErrorDocument 409 404.html
-ErrorDocument 410 404.html
-ErrorDocument 411 404.html
-ErrorDocument 412 404.html
-ErrorDocument 413 404.html
-ErrorDocument 414 404.html
-ErrorDocument 500 404.html
-ErrorDocument 501 404.html
-ErrorDocument 502 404.html
-ErrorDocument 503 404.html
-ErrorDocument 504 404.html
-ErrorDocument 505 404.html
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^(thutothebelive\.com)(:80)? [NC]
-RewriteRule ^(.*) http://www.thutothebelive.com/$1 [R=301,L]
-DirectoryIndex index.html       
-order deny,allow
+
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -37,3 +8,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
 RewriteRule (.*)$ /$1/ [R=301,L]
+
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
